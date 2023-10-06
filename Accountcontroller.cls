@@ -15,6 +15,11 @@ public with sharing class AccountController {
         throw new AuraHandledException('Forced error');              
     }
 
+      @AuraEnabled(cacheable=true)
+    public static List<Account> getAccountRelatedCasesList() {
+        throw new AuraHandledException('Forced error');              
+    }
+
     /*@AuraEnabled(cacheable=true)
     public static List<Contact> getRelatedContacts(Id accountId) {
         throw new AuraHandledException('Forced error');
